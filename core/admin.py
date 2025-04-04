@@ -2,6 +2,7 @@
 Django admin customization.
 """
 
+from re import A
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
@@ -53,3 +54,4 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Categoria)
+admin.site.register(models.Editora)
