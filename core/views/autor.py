@@ -7,4 +7,3 @@ from core.serializers.autor import AutorSerializer
 class AutorViewSet(ModelViewSet):
     queryset = Autor.objects.all()
     serializer_class = AutorSerializer
-    
