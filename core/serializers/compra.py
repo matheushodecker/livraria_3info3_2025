@@ -3,7 +3,7 @@ from rest_framework.serializers import CharField, ModelSerializer, SerializerMet
 from core.models import Compra, ItensCompra
 
 class ItensCompraSerializer(ModelSerializer):
-    
+
     total = SerializerMethodField()
 
     def get_total(self, instance):
@@ -22,4 +22,5 @@ class CompraSerializer(ModelSerializer):
 
     class Meta:
         model = Compra
-        fields = ('id', 'usuario', 'status', 'itens')
+        fields = ('id', 'usuario', 'status', 'total', 'itens')
+        
